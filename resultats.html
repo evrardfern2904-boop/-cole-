@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Résultats - École Fraternité</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:30px;
+background:white;
+}
+
+th,td{
+border:1px solid #ddd;
+padding:12px;
+text-align:center;
+}
+
+th{
+background:#0056b3;
+color:white;
+}
+
+tr:nth-child(even){
+background:#f5f5f5;
+}
+
+.recherche{
+max-width:700px;
+margin:auto;
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 5px 10px rgba(0,0,0,.2);
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+<h1>École Fraternité</h1>
+<p>Excellence - Discipline - Réussite</p>
+</div>
+
+<nav>
+
+<ul>
+
+<li><a href="index.html">Accueil</a></li>
+<li><a href="apropos.html">À propos</a></li>
+<li><a href="formations.html">Cycles</a></li>
+<li><a href="administration.html">Administration</a></li>
+<li><a href="calendrier.html">Calendrier</a></li>
+<li><a href="resultats.html">Résultats</a></li>
+<li><a href="inscription.html">Inscription</a></li>
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<section>
+
+<h2>Consultation des résultats</h2>
+
+<div class="recherche">
+
+<form>
+
+<label>Numéro matricule</label>
+
+<input
+type="text"
+placeholder="Exemple : FRAT20260015"
+required>
+
+<label>Classe</label>
+
+<select required>
+
+<option>Choisir la classe</option>
+
+<option>CI</option>
+<option>CP</option>
+<option>CE1</option>
+<option>CE2</option>
+<option>CM1</option>
+<option>CM2</option>
+
+<option>6e</option>
+<option>5e</option>
+<option>4e</option>
+<option>3e</option>
+
+<option>Seconde</option>
+<option>Première</option>
+<option>Terminale</option>
+
+</select>
+
+<button type="submit">
+
+Consulter les résultats
+
+</button>
+
+</form>
+
+</div>
+
+<h2 style="margin-top:60px;">
+
+Exemple de bulletin
+
+</h2>
+
+<table>
+
+<tr>
+
+<th>Matière</th>
+
+<th>Note /20</th>
+
+<th>Observation</th>
+
+</tr>
+
+<tr>
+
+<td>Français</td>
+
+<td>15</td>
+
+<td>Bien</td>
+
+</tr>
+
+<tr>
+
+<td>Mathématiques</td>
+
+<td>17</td>
+
+<td>Très Bien</td>
+
+</tr>
+
+<tr>
+
+<td>Anglais</td>
+
+<td>16</td>
+
+<td>Bien</td>
+
+</tr>
+
+<tr>
+
+<td>SVT</td>
+
+<td>14</td>
+
+<td>Assez Bien</td>
+
+</tr>
+
+<tr>
+
+<td>Histoire-Géographie</td>
+
+<td>13</td>
+
+<td>Assez Bien</td>
+
+</tr>
+
+<tr>
+
+<td>Physique-Chimie</td>
+
+<td>18</td>
+
+<td>Excellent</td>
+
+</tr>
+
+<tr>
+
+<th>Moyenne Générale</th>
+
+<th>15,5 /20</th>
+
+<th>Admis</th>
+
+</tr>
+
+</table>
+
+</section>
+
+<footer>
+
+<p>
+
+École Fraternité
+
+<br>
+
+Natitingou - Bénin
+
+<br><br>
+
+© 2026 Tous droits réservés
+
+</p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
