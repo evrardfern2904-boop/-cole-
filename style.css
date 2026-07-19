@@ -42,8 +42,8 @@ nav ul li{
     margin-left:25px;
 }
 
-nav ul li a{
-    color:blue;
+nav ol li a{
+    color:lightyellow;
     text-decoration:none;
     font-weight:bold;
     transition:.3s;
