@@ -36,26 +36,27 @@
 <h2>Formulaire d'inscription</h2>
     
   <form 
-      action="https://formspree.io/f/mbdngepb"method="POST">
+      action="https://formspree.io/f/mbdngepb"
+      method="POST">
 
 <label>Nom</label>
-<input type="text" placeholder="Votre nom" required>
+<input type="text" name="nom" placeholder="Votre nom" required>
 
 <label>Prénom</label>
-<input type="text" placeholder="Votre prénom" required>
+<input type="text" name="prénom" placeholder="Votre prénom" required>
 
 <label>Sexe</label>
-<select required>
+<select name="sexe" required>
     <option value="">Choisir</option>
     <option>Masculin</option>
     <option>Féminin</option>
 </select>
 
 <label>Date de naissance</label>
-<input type="date" required>
+<input type="date" name="date_naissance"required>
 
 <label>Classe demandée</label>
-<select required>
+<select name="classe" required>
     <option value="">Choisir une classe</option>
 
     <optgroup label="Maternelle">
@@ -86,19 +87,19 @@
 </select>
 
 <label>Nom du parent ou tuteur</label>
-<input type="text" placeholder="Nom du parent" required>
+<input type="text" name="nom_parent" placeholder="Nom du parent" required>
 
 <label>Téléphone</label>
-<input type="tel" placeholder="+229 XX XX XX XX" required>
+<input type="tel" name="telephone" placeholder="+229 XX XX XX XX" required>
 
 <label>Adresse</label>
-<input type="text" placeholder="Votre adresse">
+<input type="text" name="adresse" placeholder="Votre adresse">
 
 <label>Email</label>
-<input type="email" placeholder="exemple@email.com">
+<input type="email" name="email" placeholder="exemple@email.com">
 
 <label>Informations complémentaires</label>
-<textarea rows="5" placeholder="Votre message..."></textarea>
+<textarea name="message" rows="5" placeholder="Votre message..."></textarea>
 
 <button type="submit">Envoyer la demande d'inscription</button>
 
