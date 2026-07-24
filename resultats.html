@@ -235,6 +235,44 @@ Natitingou - Bénin
 </footer>
 
 <script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+const SUPABASE_URL = "TON_PROJECT_URL";
+const SUPABASE_KEY = "TA_ANON_KEY";
+const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
+async function chercherResultat() {
+  const matricule = document.getElementById("matricule").value.trim();
+  const classe = document.getElementById("classe").value.trim();
+
+  const { data: eleve, error } = await supabase
+    .from("eleves")
+    .select("*")
+    .eq("matricule", matricule)
+    .eq("classe", classe)
+    .single();
+
+  if (error || !eleve) {
+    document.getElementById("resultat").innerHTML = "Aucun résultat trouvé.";
+    return;
+  }
+
+  const { data: notes } = await supabase
+    .from("notes")
+    .select("*")
+    .eq("eleve_id", eleve.id);
+
+  let html = `<h3>${eleve.nom} — ${eleve.classe}</h3>
+    <p>Moyenne générale : ${eleve.moyenne_generale} — Rang : ${eleve.rang}</p><ul>`;
+
+  notes.forEach(n => {
+    html += `<li>${n.matiere} : ${n.note}/20 (coef ${n.coefficient})</li>`;
+  });
+
+  html += "</ul>";
+  document.getElementById("resultat").innerHTML = html;
+}
+</script>
 
 </body>
 
